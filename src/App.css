@@ -1,38 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong");
+
 .App {
+  text-align: center;
+  align-items: center;
+}
+
+Header {
+  border: 15px double purple;
+  border-radius: 10%;
+  margin-bottom: 1em;
+  text-align: center;
+  font-family: Audiowide;
+  font-size: 2em;
+  background-image: -webkit-radial-gradient(purple, white);
+  color: whitesmoke;
+}
+
+.Home {
+  display: block;
+  font-size: larger;
+  padding: 1em;
+}
+
+.reviewListButton {
+  font-size: large;
+  border: 0.2em solid;
+  border-radius: 10%;
+}
+
+Footer {
+  background-image: -webkit-radial-gradient(purple, white);
+  color: whitesmoke;
+}
+
+Footer #toTheTopButton {
+  margin: 1em;
+  border: 0.25em solid;
+}
+
+.ReviewList {
+  min-width: fit-content;
+  border: 5px solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
+}
+
+.ReviewCard {
+  min-width: fit-content;
+  margin: 5em;
+  border: 1em dashed;
+  padding: 4em;
+  border-radius: 10%;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  font-family: trirong;
+}
+
+.ReviewCard #title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: larger;
+  border-bottom: 0.25em solid;
+  margin-bottom: 1em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .ReviewCard #designer {
+  border-bottom: 2px solid;
+  font-size: large;
+} */
+
+.ReviewCard #category {
+  border: 2px dashed;
+  margin-bottom: 1em;
+  font-size: larger;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.ReviewCard #review_img_url {
+  height: auto;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.ReviewCard #comment_count {
+  float: right;
+  padding: 1em;
+  text-align: center;
+  border: 2px solid;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReviewCard #votes {
+  float: left;
+  padding: 1em;
+  border: 2px solid;
+  border-radius: 10%;
 }
+
+.ReviewCard #owner {
+  font-size: larger;
+}
+
+/* .ReviewCard #review_body {
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .ReviewCard #created_at {
+  float: right;
+  padding: 1em;
+  border: 2px solid;
+} */
