@@ -2,14 +2,12 @@
 
 .App {
   text-align: center;
-  align-items: center;
 }
 
 Header {
   border: 15px double purple;
   border-radius: 10%;
   margin-bottom: 1em;
-  text-align: center;
   font-family: Audiowide;
   font-size: 2em;
   background-image: -webkit-radial-gradient(purple, white);
@@ -99,4 +97,59 @@ Footer #toTheTopButton {
 
 .ReviewCard #owner {
   font-size: larger;
+}
+
+.singleCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: fit-content;
+}
+
+#singleTitle {
+  font-size: 3rem;
+  margin: 0.5em;
+  border-bottom: 0.25rem solid;
+}
+
+#singleReviewImg {
+  margin: 1em;
+  border: 2em double purple;
+}
+
+#singleReviewBody {
+  font-size: large;
+  text-align: center;
+  margin: 1em 2rem;
+  border: 0.2rem double purple;
+  padding: 1em;
+  line-height: 2em;
+}
+
+#singleComments {
+  font-size: larger;
+  padding: 1em;
+  border: 0.5em double purple;
+  justify-content: center;
+  align-items: center;
+}
+
+#singleVotes {
+  font-size: larger;
+  padding: 1em;
+  border: 2px solid;
+  border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, green, red);
+}
+
+#singleOwner {
+  font-size: larger;
+}
+
+#singleCreatedAt {
+  font-size: large;
 }

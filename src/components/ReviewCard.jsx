@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ReviewCard({
   review_id,
   title,
@@ -13,7 +15,9 @@ export default function ReviewCard({
   return (
     <div className="ReviewCard">
       <li id="title">
-        <h2>{title}</h2>
+        <Link to={`/reviews/${review_id}`}>
+          <h2>{title}</h2>
+        </Link>
       </li>
       <li id="category">
         <h3>Category: {category}</h3>
