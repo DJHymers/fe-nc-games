@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function ReviewCard({
   review_id,
   title,
@@ -12,7 +10,6 @@ export default function ReviewCard({
   votes,
   comment_count,
 }) {
-  const [comment, setComment] = useState("");
   return (
     <div className="ReviewCard">
       <li id="title">

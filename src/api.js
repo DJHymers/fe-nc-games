@@ -6,6 +6,5 @@ const ncGamesAPI = axios.create({
 
 export const fetchReviews = async () => {
   const res = await ncGamesAPI.get(`/reviews`);
-  console.log(res);
   return res.data.reviews;
 };

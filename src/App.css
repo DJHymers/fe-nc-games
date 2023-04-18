@@ -70,11 +70,6 @@ Footer #toTheTopButton {
   text-align: center;
 }
 
-/* .ReviewCard #designer {
-  border-bottom: 2px solid;
-  font-size: large;
-} */
-
 .ReviewCard #category {
   border: 2px dashed;
   margin-bottom: 1em;
@@ -105,15 +100,3 @@ Footer #toTheTopButton {
 .ReviewCard #owner {
   font-size: larger;
 }
-
-/* .ReviewCard #review_body {
-  padding: 2em;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .ReviewCard #created_at {
-  float: right;
-  padding: 1em;
-  border: 2px solid;
-} */
