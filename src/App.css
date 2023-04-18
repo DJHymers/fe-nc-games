@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong");
 
 .App {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 Header {
   border: 15px double purple;
   border-radius: 10%;
-  margin-bottom: 1em;
   font-family: Audiowide;
   font-size: 2em;
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
+  width: 100vw;
 }
 
 .Home {
@@ -29,6 +34,7 @@ Header {
 Footer {
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
+  width: 100vw;
 }
 
 Footer #toTheTopButton {
@@ -37,7 +43,6 @@ Footer #toTheTopButton {
 }
 
 .ReviewList {
-  min-width: fit-content;
   border: 5px solid;
   display: flex;
   flex-direction: row;
@@ -47,8 +52,12 @@ Footer #toTheTopButton {
   background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
 }
 
+.ReviewList ul {
+  padding: 0;
+  margin: 0;
+}
+
 .ReviewCard {
-  min-width: fit-content;
   margin: 5em;
   border: 1em dashed;
   padding: 4em;
@@ -60,8 +69,6 @@ Footer #toTheTopButton {
 }
 
 .ReviewCard #title {
-  margin-left: auto;
-  margin-right: auto;
   font-size: larger;
   border-bottom: 0.25em solid;
   margin-bottom: 1em;
@@ -79,6 +86,8 @@ Footer #toTheTopButton {
   width: 100%;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
+  height: auto;
 }
 
 .ReviewCard #comment_count {
@@ -105,7 +114,7 @@ Footer #toTheTopButton {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-width: fit-content;
+  text-align: center;
 }
 
 #singleTitle {
@@ -117,6 +126,10 @@ Footer #toTheTopButton {
 #singleReviewImg {
   margin: 1em;
   border: 2em double purple;
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 #singleReviewBody {
