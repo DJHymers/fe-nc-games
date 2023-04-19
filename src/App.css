@@ -8,95 +8,309 @@
 Header {
   border: 15px double purple;
   border-radius: 10%;
-  margin-bottom: 1em;
-  text-align: center;
   font-family: Audiowide;
-  font-size: 2em;
+  font-size: 1em;
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
+  min-width: max-content;
 }
 
 .Home {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: larger;
   padding: 1em;
-}
-
-.reviewListButton {
-  font-size: large;
-  border: 0.2em solid;
-  border-radius: 10%;
+  align-items: center;
+  text-align: center;
 }
 
 Footer {
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
-}
-
-Footer #toTheTopButton {
-  margin: 1em;
-  border: 0.25em solid;
+  min-width: max-content;
 }
 
 .ReviewList {
-  min-width: fit-content;
-  border: 5px solid;
+  border: 0.15em solid;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
 }
 
+.ReviewList ul {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+}
+
 .ReviewCard {
-  min-width: fit-content;
-  margin: 5em;
-  border: 1em dashed;
-  padding: 4em;
-  border-radius: 10%;
+  margin: 1em;
+  border: 0.5em dashed;
+  padding: 2em;
+  border-radius: 5%;
   list-style-type: none;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: trirong;
 }
 
 .ReviewCard #title {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: larger;
   border-bottom: 0.25em solid;
   margin-bottom: 1em;
   text-align: center;
 }
 
 .ReviewCard #category {
-  border: 2px dashed;
+  border: 0.2em dashed;
   margin-bottom: 1em;
-  font-size: larger;
 }
 
-.ReviewCard #review_img_url {
-  height: auto;
+.ReviewCard #review_img {
   width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border: 0.25em solid purple;
+  margin: 0em;
+}
+
+.ReviewCard #comment_count {
+  flex: right;
+  padding: 1em;
+  text-align: center;
+  border: 0.2em solid;
+}
+
+.ReviewCard #votes {
+  flex: left;
+  padding: 1em;
+  border: 0.2em solid;
+  border-radius: 10%;
+}
+
+.singleCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#singleTitle {
+  font-size: 1.5rem;
+  margin: 0.5em;
+  border-bottom: 0.25rem solid;
+}
+
+#singleReviewImg {
+  margin: 0.5em;
+  border: 1.5em double purple;
+  height: auto;
+  width: 70vw;
   justify-content: center;
   align-items: center;
 }
 
-.ReviewCard #comment_count {
-  float: right;
-  padding: 1em;
+#singleReviewBody {
   text-align: center;
-  border: 2px solid;
+  margin: 0.5em;
+  border: 0.2rem double purple;
+  padding: 1em;
+  line-height: 1.5em;
 }
 
-.ReviewCard #votes {
-  float: left;
+#singleComments {
+  font-size: large;
+  padding: 1em;
+  border: 0.5em double purple;
+  justify-content: center;
+  align-items: center;
+}
+
+#singleVotes {
+  font-size: large;
   padding: 1em;
   border: 2px solid;
   border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left, green, red);
 }
 
-.ReviewCard #owner {
+#singleOwner {
   font-size: larger;
+}
+
+#singleCreatedAt {
+  font-size: large;
+}
+
+@media only screen and (min-width: 600px) {
+  .App {
+    text-align: center;
+    align-items: center;
+  }
+
+  Header {
+    border: 15px double purple;
+    border-radius: 10%;
+    font-family: Audiowide;
+    font-size: 2em;
+    background-image: -webkit-radial-gradient(purple, white);
+    color: whitesmoke;
+    max-width: 100%;
+  }
+
+  .Home {
+    display: block;
+    font-size: larger;
+    padding: 1em;
+  }
+
+  Footer {
+    background-image: -webkit-radial-gradient(purple, white);
+    color: whitesmoke;
+    max-width: 100vw;
+  }
+
+  Footer #toTheTopButton {
+    margin: 1em;
+    border: 0.25em solid;
+  }
+
+  .ReviewList {
+    border: 5px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
+    max-width: 100%;
+  }
+
+  .ReviewList ul {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .ReviewCard {
+    margin: 5em;
+    border: 1em dashed;
+    padding: 4em;
+    border-radius: 10%;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: trirong;
+    max-width: 100%;
+  }
+
+  .ReviewCard #title {
+    font-size: larger;
+    border-bottom: 0.25em solid;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .ReviewCard #category {
+    border: 2px dashed;
+    margin-bottom: 1em;
+    font-size: larger;
+  }
+
+  .ReviewCard #review_img {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    border: 1em solid purple;
+  }
+
+  .ReviewCard #comment_count {
+    float: right;
+    padding: 1em;
+    text-align: center;
+    border: 2px solid;
+  }
+
+  .ReviewCard #votes {
+    float: left;
+    padding: 1em;
+    border: 2px solid;
+    border-radius: 10%;
+  }
+
+  .ReviewCard #owner {
+    font-size: larger;
+  }
+
+  .singleCard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #singleTitle {
+    font-size: 3rem;
+    margin: 0.5em;
+    border-bottom: 0.25rem solid;
+  }
+
+  #singleReviewImg {
+    margin: 1em;
+    border: 2em double purple;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #singleReviewBody {
+    font-size: large;
+    text-align: center;
+    margin: 1em 2rem;
+    border: 0.2rem double purple;
+    padding: 1em;
+    line-height: 2em;
+  }
+
+  #singleComments {
+    font-size: larger;
+    padding: 1em;
+    border: 0.5em double purple;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #singleVotes {
+    font-size: larger;
+    padding: 1em;
+    border: 2px solid;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left, green, red);
+  }
+
+  #singleOwner {
+    font-size: larger;
+  }
+
+  #singleCreatedAt {
+    font-size: large;
+  }
 }
