@@ -23,7 +23,7 @@ export default function ReviewCard({
         <h3>Category: {category}</h3>
       </li>
       <li id="review_img_url">
-        <img src={review_img_url} alt={title} />
+        <img id="review_img" src={review_img_url} alt={title} />
       </li>
       <li id="votes">
         <h3>Votes: {votes}</h3>
