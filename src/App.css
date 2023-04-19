@@ -17,7 +17,6 @@ Header {
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
   width: 100vw;
-  max-width: 100vw;
   min-width: max-content;
 }
 
@@ -36,9 +35,7 @@ Header {
 Footer {
   background-image: -webkit-radial-gradient(purple, white);
   color: whitesmoke;
-  width: 100vw;
   max-width: 100vw;
-  min-width: max-content;
 }
 
 Footer #toTheTopButton {
@@ -56,21 +53,12 @@ Footer #toTheTopButton {
   text-align: center;
   background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
   width: 100vw;
-  max-width: 100vw;
   min-width: max-content;
 }
 
 .ReviewList ul {
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  max-width: 100vw;
-  min-width: min-content;
 }
 
 .ReviewCard {
@@ -81,6 +69,7 @@ Footer #toTheTopButton {
   list-style-type: none;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: trirong;
 }
 
@@ -98,12 +87,12 @@ Footer #toTheTopButton {
 }
 
 .ReviewCard #review_img_url {
+  max-width: 100%;
   height: auto;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 1em;
-  max-width: max-content;
+  border: 1em solid purple;
 }
 
 .ReviewCard #comment_count {
