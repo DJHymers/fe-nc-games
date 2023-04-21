@@ -151,6 +151,25 @@ Footer {
   font-size: large;
 }
 
+#allComments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1em double purple;
+}
+
+#CommentCardList {
+  list-style-type: none;
+  border: 1em double purple;
+  margin: 2em;
+  padding: 0;
+}
+
+#CommentAuthor {
+  border-bottom: 0.15em solid;
+}
+
 @media only screen and (min-width: 600px) {
   .App {
     text-align: center;
@@ -193,13 +212,16 @@ Footer {
     align-items: center;
     text-align: center;
     background-image: radial-gradient(#d16ba5, #86a8e7, #5ffbf1);
-    max-width: 100%;
   }
 
   .ReviewList ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
-    max-width: 100%;
   }
 
   .ReviewCard {
@@ -212,7 +234,6 @@ Footer {
     align-items: center;
     text-align: center;
     font-family: trirong;
-    max-width: 100%;
   }
 
   .ReviewCard #title {
@@ -228,7 +249,7 @@ Footer {
     font-size: larger;
   }
 
-  .ReviewCard #review_img {
+  .ReviewCard #review_img_url {
     max-width: 100%;
     height: auto;
     justify-content: center;
@@ -312,5 +333,24 @@ Footer {
 
   #singleCreatedAt {
     font-size: large;
+  }
+
+  #allComments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1em double purple;
+  }
+
+  #CommentCardList {
+    list-style-type: none;
+    border: 2em double purple;
+    margin: 5em;
+    padding: 0;
+  }
+
+  #CommentAuthor {
+    border-bottom: 0.15em solid;
   }
 }
