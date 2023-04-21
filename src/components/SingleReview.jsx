@@ -48,11 +48,13 @@ export const SingleReview = () => {
       <h4 id="singleOwner">Review By: {review.owner}</h4>
       <h4 id="singleVotes">Votes: {review.votes}</h4>
       <h2 id="allComments">Comments: {review.comment_count} </h2>
-      {comments !== "User has not made any comments"
-        ? comments.map((comment) => {
-            return <CommentCard key={comment.review_id} {...comment} />;
-          })
-        : null}
+      {comments !== "User has not made any comments" ? (
+        comments.map((comment) => {
+          return <CommentCard key={comment.review_id} {...comment} />;
+        })
+      ) : (
+        <h2>No Comments Yet...</h2>
+      )}
     </main>
   );
 };
