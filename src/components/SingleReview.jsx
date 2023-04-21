@@ -1,16 +1,27 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchReviewById } from "../api";
+import { fetchComments, fetchReviewById } from "../api";
+import { CommentCard } from "./CommentCard";
 
 export const SingleReview = () => {
   const { review_id } = useParams();
   const [review, setReview] = useState({});
+  const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [validComments, setValidComments] = useState(null);
 
   useEffect(() => {
     setIsLoading(true);
     fetchReviewById(review_id).then((review) => {
       setReview(review);
+      setIsLoading(false);
+    });
+  }, [review_id]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetchComments(review_id).then((comments) => {
+      setComments(comments);
       setIsLoading(false);
     });
   }, [review_id]);
@@ -35,9 +46,13 @@ export const SingleReview = () => {
       <h4 id="singleCategory">Category: {review.category}</h4>
       <p id="singleReviewBody">{review.review_body}</p>
       <h4 id="singleOwner">Review By: {review.owner}</h4>
-      <h5 id="singleVotes">Votes: {review.votes}</h5>
-      <h5 id="singleComments">Comments: {review.comment_count}</h5>
-      <h5 id="singleCreatedAt">Posted: {review.created_at}</h5>
+      <h4 id="singleVotes">Votes: {review.votes}</h4>
+      <h2 id="allComments">Comments: {review.comment_count} </h2>
+      {comments !== "User has not made any comments"
+        ? comments.map((comment) => {
+            return <CommentCard key={comment.review_id} {...comment} />;
+          })
+        : null}
     </main>
   );
 };
