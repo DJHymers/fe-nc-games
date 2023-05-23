@@ -33,7 +33,7 @@ Footer {
 .ReviewList {
   border: 0.15em solid;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
@@ -234,6 +234,7 @@ Footer {
     align-items: center;
     text-align: center;
     font-family: trirong;
+    background: peachpuff;
   }
 
   .ReviewCard #title {
@@ -241,6 +242,24 @@ Footer {
     border-bottom: 0.25em solid;
     margin-bottom: 1em;
     text-align: center;
+    background-image: -webkit-radial-gradient(rebeccapurple, purple);
+  }
+
+  .ReviewCard #titleLink {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+  }
+
+  .ReviewCard #title:hover {
+    border: 0.25em solid;
+    color: purple;
+    background: peachpuff;
+  }
+
+  .ReviewCard #titleLink:hover {
+    color: purple;
+    border: 0.25em solid;
   }
 
   .ReviewCard #category {
@@ -298,6 +317,7 @@ Footer {
     height: auto;
     justify-content: center;
     align-items: center;
+    width: 30%;
   }
 
   #singleReviewBody {
@@ -307,6 +327,9 @@ Footer {
     border: 0.2rem double purple;
     padding: 1em;
     line-height: 2em;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #singleComments {
@@ -324,7 +347,20 @@ Footer {
     border-radius: 10%;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to left, green, red);
+    background-image: linear-gradient(to left, purple, white);
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #reviewDownVote {
+    margin-right: 3em;
+    font-size: large;
+  }
+
+  #reviewUpVote {
+    margin-left: 3em;
+    font-size: large;
   }
 
   #singleOwner {
@@ -341,6 +377,9 @@ Footer {
     align-items: center;
     justify-content: center;
     border: 1em double purple;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #CommentCardList {
@@ -348,6 +387,9 @@ Footer {
     border: 2em double purple;
     margin: 5em;
     padding: 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #CommentAuthor {
