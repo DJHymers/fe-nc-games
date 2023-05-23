@@ -15,7 +15,7 @@ export default function ReviewCard({
   return (
     <div className="ReviewCard">
       <li id="title">
-        <Link to={`/reviews/${review_id}`}>
+        <Link id="titleLink" to={`/reviews/${review_id}`}>
           <h2>{title}</h2>
         </Link>
       </li>
